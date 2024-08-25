@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxp6nokcnfs3i"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_qpnrc"]
+[ext_resource type="PackedScene" uid="uid://dlfgfctb8jovk" path="res://game_hud.tscn" id="2_82o22"]
+[ext_resource type="LabelSettings" uid="uid://bp0thv8b5ccpq" path="res://title_label_settings.tres" id="2_n0uta"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_qpnrc")
+
+[node name="GameHUD" parent="." instance=ExtResource("2_82o22")]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.329412, 0.0509804, 0.431373, 1)
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -367.0
+offset_top = -68.5
+offset_right = 367.0
+offset_bottom = 68.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Put Game Here"
+label_settings = ExtResource("2_n0uta")

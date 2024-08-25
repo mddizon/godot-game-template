@@ -1,0 +1,81 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0xtomcauhsmj"]
+
+[ext_resource type="Script" path="res://credits.gd" id="1_513qy"]
+[ext_resource type="LabelSettings" uid="uid://bp0thv8b5ccpq" path="res://title_label_settings.tres" id="1_bv082"]
+[ext_resource type="Theme" uid="uid://dsbdv5340htvt" path="res://game_ui_theme.tres" id="2_bns1j"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_513qy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.329412, 0.0509804, 0.431373, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -327.0
+offset_top = -210.0
+offset_right = 327.0
+offset_bottom = -73.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Credits
+"
+label_settings = ExtResource("1_bv082")
+
+[node name="Description" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -50.0
+offset_right = 300.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "Put Credits Here
+
+Uses BBcode, so stuff like [color=\"red\"]colors[/color] or [b]boldness[/b] should work. You can also include icon resources as well."
+fit_content = true
+scroll_active = false
+
+[node name="HBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -118.5
+offset_top = -220.0
+offset_right = 118.5
+offset_bottom = -119.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Back" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_bns1j")
+text = "Back To Start"
+
+[connection signal="pressed" from="HBoxContainer/Back" to="." method="_on_back_pressed"]
