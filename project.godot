@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="game-template"
-run/main_scene="res://start_screen.tscn"
+run/main_scene="res://Scenes/start_screen.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Init="*res://Autoloads/init.gd"
 
 [display]
 

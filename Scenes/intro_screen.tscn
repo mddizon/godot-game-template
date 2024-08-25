@@ -1,17 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://b0xtomcauhsmj"]
+[gd_scene load_steps=4 format=3 uid="uid://npbh6gxxefmr"]
 
-[ext_resource type="Script" path="res://credits.gd" id="1_513qy"]
-[ext_resource type="LabelSettings" uid="uid://bp0thv8b5ccpq" path="res://title_label_settings.tres" id="1_bv082"]
-[ext_resource type="Theme" uid="uid://dsbdv5340htvt" path="res://game_ui_theme.tres" id="2_bns1j"]
+[ext_resource type="Theme" uid="uid://dsbdv5340htvt" path="res://Resources/game_ui_theme.tres" id="1_a3oaa"]
+[ext_resource type="Script" path="res://Scenes/intro_screen.gd" id="1_hhkfw"]
+[ext_resource type="LabelSettings" uid="uid://bp0thv8b5ccpq" path="res://Resources/title_label_settings.tres" id="1_i764y"]
 
-[node name="Credits" type="Control"]
+[node name="IntroScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_513qy")
+script = ExtResource("1_hhkfw")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -20,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.329412, 0.0509804, 0.431373, 1)
+color = Color(0.148989, 0.0781567, 0.278447, 1)
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 1
@@ -35,9 +35,8 @@ offset_right = 327.0
 offset_bottom = -73.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Credits
-"
-label_settings = ExtResource("1_bv082")
+text = "Intro/Tutorial"
+label_settings = ExtResource("1_i764y")
 
 [node name="Description" type="RichTextLabel" parent="."]
 layout_mode = 1
@@ -53,7 +52,7 @@ offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
-text = "Put Credits Here
+text = "Put information about game controls, lore, etc here.
 
 Uses BBcode, so stuff like [color=\"red\"]colors[/color] or [b]boldness[/b] should work. You can also include icon resources as well."
 fit_content = true
@@ -73,9 +72,9 @@ offset_bottom = -119.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Back" type="Button" parent="HBoxContainer"]
+[node name="StartGame" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-theme = ExtResource("2_bns1j")
-text = "Back To Start"
+theme = ExtResource("1_a3oaa")
+text = "Start Game"
 
-[connection signal="pressed" from="HBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="HBoxContainer/StartGame" to="." method="_on_start_game_pressed"]

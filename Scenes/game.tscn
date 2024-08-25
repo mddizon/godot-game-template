@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://bxp6nokcnfs3i"]
 
-[ext_resource type="Script" path="res://game.gd" id="1_qpnrc"]
-[ext_resource type="PackedScene" uid="uid://dlfgfctb8jovk" path="res://game_hud.tscn" id="2_82o22"]
-[ext_resource type="LabelSettings" uid="uid://bp0thv8b5ccpq" path="res://title_label_settings.tres" id="2_n0uta"]
+[ext_resource type="Script" path="res://Scenes/game.gd" id="1_qpnrc"]
+[ext_resource type="PackedScene" uid="uid://dlfgfctb8jovk" path="res://Scenes/game_hud.tscn" id="2_82o22"]
+[ext_resource type="LabelSettings" uid="uid://bp0thv8b5ccpq" path="res://Resources/title_label_settings.tres" id="2_n0uta"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_qpnrc")

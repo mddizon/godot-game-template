@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 # TODO: Change this to a dedicated gameover screen
-@onready var game_over_screen = preload("res://start_screen.tscn")
+@onready var game_over_screen = preload("res://Scenes/start_screen.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
